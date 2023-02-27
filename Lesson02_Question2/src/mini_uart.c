@@ -1,3 +1,4 @@
+#include "mini_uart.h"
 #include "utils.h"
 #include "peripherals/mini_uart.h"
 #include "peripherals/gpio.h"
