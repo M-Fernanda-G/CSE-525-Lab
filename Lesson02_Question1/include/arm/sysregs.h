@@ -39,4 +39,9 @@
 #define SPSR_EL1h			(5 << 0)
 #define SPSR_VALUE			(SPSR_MASK_ALL | SPSR_EL1h)
 
+// SPSR_EL2, Saved Program status register (EL2) page 383 of AArch64 Reference Manual
+
+#define SPSR_EL2h        (9 << 0)
+#define SPSR_EL2_VALUE  (SPSR_MASK_ALL | SPSR_EL2h)
+
 #endif
