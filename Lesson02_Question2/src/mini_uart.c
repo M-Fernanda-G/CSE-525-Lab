@@ -4,8 +4,7 @@
 
 void uart_send ( char c )
 {
-	while(1) 
-   {
+	while(1) {
 		if(get32(AUX_MU_LSR_REG)&0x20)
 			break;
 	}
@@ -14,8 +13,7 @@ void uart_send ( char c )
 
 char uart_recv ( void )
 {
-	while(1) 
-   {
+	while(1) {
 		if(get32(AUX_MU_LSR_REG)&0x01)
 			break;
 	}
@@ -24,8 +22,7 @@ char uart_recv ( void )
 
 void uart_send_string(char* str)
 {
-	for (int i = 0; str[i] != '\0'; i ++) 
-   {
+	for (int i = 0; str[i] != '\0'; i ++) {
 		uart_send((char)str[i]);
 	}
 }
@@ -56,6 +53,7 @@ void uart_init ( void )
 
 	put32(AUX_MU_CNTL_REG,3);               //Finally, enable transmitter and receiver
 }
+
 
 // This function is required by printf function
 void putc ( void* p, char c)
